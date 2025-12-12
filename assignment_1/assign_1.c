@@ -1,22 +1,18 @@
 #include <stdio.h>
-
-int countOneBits(unsigned int n) {
-    int count = 0;
-    while (n) {
-        count += (n & 1);  // Add 1 if the last bit is 1
-        n >>= 1;           // Right shift by 1
-    }
-    return count;
-}
-
 int main() {
-    unsigned int num;
+    int num;
+    int count;
 
     printf("Enter a number: ");
-    scanf("%u", &num);
-
-    printf("Number of 1 bits: %d\n", countOneBits(num));
-
+    scanf("%d", &num);
+    while(num>0){
+    	count++;
+    	num=num&(num-1);
+    	
+	}
+	printf("number of 1's=%d\n",count);
     return 0;
 }
+
+
 
