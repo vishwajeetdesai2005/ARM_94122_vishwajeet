@@ -60,8 +60,8 @@ all: main-build
 main-build: Basic\ LCD\ Display.elf secondary-outputs
 
 # Tool invocations
-Basic\ LCD\ Display.elf Basic\ LCD\ Display.map: $(OBJS) $(USER_OBJS) C:\Users\Omkar\STM32CubeIDE\workspace_1.19.0\Basic\ LCD\ Display\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Basic LCD Display.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Omkar\STM32CubeIDE\workspace_1.19.0\Basic LCD Display\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Basic LCD Display.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Basic\ LCD\ Display.elf Basic\ LCD\ Display.map: $(OBJS) $(USER_OBJS) C:\Users\ASUS\OneDrive\Desktop\sunbeamclasses\ARM_94122_vishwajeet\assig-9\Basic\ LCD\ Display\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Basic LCD Display.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ASUS\OneDrive\Desktop\sunbeamclasses\ARM_94122_vishwajeet\assig-9\Basic LCD Display\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Basic LCD Display.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
